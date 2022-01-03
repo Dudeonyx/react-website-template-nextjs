@@ -1,16 +1,20 @@
-html,
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Encode Sans Extended', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer base {
+  .nav {
+    @apply h-20 bg-black sticky z-10 flex items-center justify-center top-0;
+  }
 
-* {
-  box-sizing: border-box;
+  .nav-container {
+    @apply h-20 max-w-6xl flex justify-between items-center w-full px-8;
+  }
 }
