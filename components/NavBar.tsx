@@ -1,46 +1,40 @@
-import { useEffect, useReducer } from 'react';
+import { SideBarProps } from '../pages';
 import {
   Nav,
   NavContainer,
   Logo,
   NavLinksContainer,
-  NavLink,
+  NavLinkItem,
   SignInButtonContainer,
   SignInButton,
   SideBarMenu,
   SideBarMenuContainer,
+  NavLink,
 } from './NavElements';
-import SideBar from './SideBar';
 
-export default function NavBar() {
-  const [showSideBar, toggleShowSideBar] = useReducer((s) => !s, false);
-  useEffect(() => {
-    console.log(window.innerWidth);
-    if (window.innerWidth > 768 && showSideBar) {
-      toggleShowSideBar();
-    }
-  });
+export default function NavBar({ toggleShowSideBar }: Omit<SideBarProps, 'showSideBar'>) {
   return (
     <Nav>
-      <SideBar showSideBar={showSideBar} toggleShowSideBar={toggleShowSideBar} />
       <NavContainer>
         <Logo>dolla</Logo>
         <NavLinksContainer>
-          <NavLink>
-            <a>About</a>
-          </NavLink>
-          <NavLink>
-            <a>Discover</a>
-          </NavLink>
-          <NavLink>
-            <a>Services</a>
-          </NavLink>
-          <NavLink>
-            <a>Sign Up</a>
-          </NavLink>
+          <NavLinkItem>
+            <NavLink to="about">About</NavLink>
+          </NavLinkItem>
+          <NavLinkItem>
+            <NavLink to="discover">Discover</NavLink>
+          </NavLinkItem>
+          <NavLinkItem>
+            <NavLink to="services">Services</NavLink>
+          </NavLinkItem>
+          <NavLinkItem>
+            <NavLink to="signup">Sign Up</NavLink>
+          </NavLinkItem>
         </NavLinksContainer>
         <SignInButtonContainer>
-          <SignInButton>Sign In</SignInButton>
+          <SignInButton href="/signin">
+            <a>Sign In</a>
+          </SignInButton>
         </SignInButtonContainer>
         <SideBarMenuContainer>
           <SideBarMenu onClick={toggleShowSideBar} />
