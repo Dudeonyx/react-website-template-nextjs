@@ -29,7 +29,9 @@ const HeroSection = (props: Props) => {
           Sign up for a new account today and receive $250 in credit towards your next payment
         </HeroP>
         <HeroBtnWrapper>
-          <HeroBtn>Get Started {hover ? <ArrowRight /> : <ArrowForward />}</HeroBtn>
+          <HeroBtn onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
+          </HeroBtn>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>

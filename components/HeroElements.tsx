@@ -23,16 +23,28 @@ ml-2
 text-xl`;
 
 export const HeroContent = tw.div`
-z-20 max-w-7xl absolute px-2 py-6 flex items-center
+z-20 text-white max-w-7xl absolute px-2 py-6 flex items-center flex-col
 `;
 export const HeroH1 = tw.h1`
-text-black text-center text-[32px] md:text-5xl
+text-white text-center text-[32px] md:text-5xl
 `;
 export const HeroP = tw.p`
-text-black max-w-[600px] text-center text-[18px] md:text-2xl`;
+text-white max-w-[600px] text-center text-[18px] md:text-2xl`;
 export const HeroBtnWrapper = tw.div`
 mt-8 flex items-center flex-col
 `;
 export const HeroBtn = tw.button`
-
+flex
+items-center
+p-3
+hover:px-4
+justify-center
+rounded-3xl
+bg-green-500
+transition-all
+hover:bg-white
+hover:text-black
+hover:transition-shadow
+hover:shadow
+hover:shadow-slate-200
 `;
