@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { SideBarProps } from '../pages';
 import {
   Nav,
@@ -32,9 +33,9 @@ export default function NavBar({ toggleShowSideBar }: Omit<SideBarProps, 'showSi
           </NavLinkItem>
         </NavLinksContainer>
         <SignInButtonContainer>
-          <SignInButton href="/signin">
-            <a>Sign In</a>
-          </SignInButton>
+          <Link href="/signin" passHref>
+            <SignInButton>Sign In</SignInButton>
+          </Link>
         </SignInButtonContainer>
         <SideBarMenuContainer>
           <SideBarMenu onClick={toggleShowSideBar} />
