@@ -1,7 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { HiMenu } from 'react-icons/hi';
 import { Link as LinkS } from 'react-scroll';
-import Link from 'next/link';
 
 export const Nav = tw.nav`
 h-20 
@@ -17,12 +16,15 @@ export const NavContainer = tw.div`
 h-20 max-w-6xl flex justify-between items-center w-full px-8
 `;
 
+const LogoP = tw.p`text-white text-2xl font-bold`;
+const LogoA = tw.a`cursor-pointer hover:shadow-sm shadow-white`;
+
 export function Logo({ children }: { children: string }) {
   return (
     <div>
-      <p className="text-white text-2xl font-bold">
-        <a className="cursor-pointer hover:shadow-sm shadow-white">{children}</a>
-      </p>
+      <LogoP>
+        <LogoA>{children}</LogoA>
+      </LogoP>
     </div>
   );
 }
@@ -61,7 +63,7 @@ export const SignInButtonContainer = tw.div`
 hidden md:block text-black text-xl
 `;
 // const TG = (props: { gar: number }) => <div>{props.gar}</div>;
-export const SignInButton = tw(Link)`
+export const SignInButton = tw.a`
 px-5 py-2 rounded-3xl bg-green-500 transition-all hover:bg-white
 `;
 
