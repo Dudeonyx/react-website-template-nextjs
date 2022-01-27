@@ -10,10 +10,17 @@ z-[12]
 flex
 items-center
 justify-center
+-mb-20
 top-0`;
 
 export const NavContainer = tw.div`
-h-20 max-w-6xl flex justify-between items-center w-full px-8
+h-20
+max-w-6xl
+flex
+justify-between
+items-center
+w-full
+px-8
 `;
 
 const LogoP = tw.p`text-white text-2xl font-bold`;
@@ -30,7 +37,16 @@ export function Logo({ children }: { children: string }) {
 }
 
 export const NavLinksContainer = tw.ul`
-hidden md:flex justify-between items-center h-full w-full max-w-md first:pl-0 last:pr-0
+hidden
+md:flex
+justify-between
+items-center
+h-full
+w-full
+max-w-md
+first:pl-0
+last:pr-0
+
 `;
 
 export const NavLinkItem = tw.li`
