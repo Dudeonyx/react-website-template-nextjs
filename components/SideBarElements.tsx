@@ -4,9 +4,9 @@ import { Link as LinkS } from 'react-scroll';
 import React from 'react';
 
 export const SideBarContainer = tw.aside<{ $showSideBar: boolean }>`
-${(props) => (props.$showSideBar ? 'flex' : 'invisible')}
+flex
+${(props) => (props.$showSideBar ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full')}
 transition-all
-${(props) => (props.$showSideBar ? ' translate-y-0' : '-translate-y-full')}
 fixed
 h-full
 w-full
