@@ -78,10 +78,11 @@ export const SideBarSignInContainer = tw.div`
     flex
     justify-center
     items-center
-    justify-self-center
-    mb-20
+    my-auto
+    self-end
+    
     flex-initial
-    h-1/4
+
 `;
 
 export const SideBarSignInButton = tw.button`
