@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { FaTimes } from 'react-icons/fa';
-import Link from 'next/link';
+import { Link as LinkS } from 'react-scroll';
 import React from 'react';
 
 export const SideBarContainer = tw.aside<{ $showSideBar: boolean }>`
@@ -56,21 +56,22 @@ text-center
 h-full
 `;
 
-export const SideBarLinkA = tw.a`
+export const SideBarLink = tw(LinkS)`
     cursor-pointer
     hover:scale-105
     transition-all
     
 `;
-export const SideBarLink = React.forwardRef<typeof Link, React.ComponentPropsWithRef<typeof Link>>(
-  ({ children, ...props }, ref) => (
-    <Link {...props} passHref>
-      <SideBarLinkA ref={ref}>{children}</SideBarLinkA>
-    </Link>
-  ),
-);
+// export const SideBarNextLink = React.forwardRef<
+//   React.ElementRef<'a'>,
+//   React.ComponentPropsWithRef<typeof Link>
+// >(({ children, ...props }, ref) => (
+//   <Link {...props} passHref>
+//     <SideBarLink ref={ref}>{children}</SideBarLink>
+//   </Link>
+// ));
 
-SideBarLink.displayName = 'SideBarLink';
+// SideBarNextLink.displayName = 'SideBarNextLink';
 
 export const SideBarSignInContainer = tw.div`
     w-full
