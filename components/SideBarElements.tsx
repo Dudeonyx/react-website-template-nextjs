@@ -1,10 +1,12 @@
 import tw from 'tailwind-styled-components';
 import { FaTimes } from 'react-icons/fa';
+import Link from 'next/link';
+import React from 'react';
 
-export const SideBarContainer = tw.aside<{ showSideBar: boolean }>`
-${(props) => (props.showSideBar ? 'flex' : 'invisible')}
+export const SideBarContainer = tw.aside<{ $showSideBar: boolean }>`
+${(props) => (props.$showSideBar ? 'flex' : 'invisible')}
 transition-all
-${(props) => (props.showSideBar ? ' translate-y-0' : '-translate-y-full')}
+${(props) => (props.$showSideBar ? ' translate-y-0' : '-translate-y-full')}
 fixed
 h-full
 w-full
@@ -54,12 +56,21 @@ text-center
 h-full
 `;
 
-export const SideBarLink = tw.a`
+export const SideBarLinkA = tw.a`
     cursor-pointer
     hover:scale-105
     transition-all
     
 `;
+export const SideBarLink = React.forwardRef<typeof Link, React.ComponentPropsWithRef<typeof Link>>(
+  ({ children, ...props }, ref) => (
+    <Link {...props} passHref>
+      <SideBarLinkA ref={ref}>{children}</SideBarLinkA>
+    </Link>
+  ),
+);
+
+SideBarLink.displayName = 'SideBarLink';
 
 export const SideBarSignInContainer = tw.div`
     w-full
