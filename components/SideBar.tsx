@@ -20,16 +20,16 @@ const SideBar = (props: SideBarProps) => {
       </CloseIconContainer>
       <SideBarLinkContainer>
         <SideBarLinkItem>
-          <SideBarLink>About</SideBarLink>
+          <SideBarLink to="about">About</SideBarLink>
         </SideBarLinkItem>
         <SideBarLinkItem>
-          <SideBarLink>Discover</SideBarLink>
+          <SideBarLink to="discover">Discover</SideBarLink>
         </SideBarLinkItem>
         <SideBarLinkItem>
-          <SideBarLink>Services</SideBarLink>
+          <SideBarLink to="services">Services</SideBarLink>
         </SideBarLinkItem>
         <SideBarLinkItem>
-          <SideBarLink>Sign Up</SideBarLink>
+          <SideBarLink to="signup">Sign Up</SideBarLink>
         </SideBarLinkItem>
       </SideBarLinkContainer>
       <SideBarSignInContainer>
