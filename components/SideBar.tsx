@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { SideBarProps } from '../pages';
 import {
@@ -13,7 +14,7 @@ import {
 
 const SideBar = (props: SideBarProps) => {
   return (
-    <SideBarContainer showSideBar={props.showSideBar}>
+    <SideBarContainer $showSideBar={props.showSideBar}>
       <CloseIconContainer>
         <CloseIcon onClick={props.toggleShowSideBar} />
       </CloseIconContainer>
@@ -32,7 +33,9 @@ const SideBar = (props: SideBarProps) => {
         </SideBarLinkItem>
       </SideBarLinkContainer>
       <SideBarSignInContainer>
-        <SideBarSignInButton>Sign In</SideBarSignInButton>
+        <Link href="/signin" passHref>
+          <SideBarSignInButton>Sign In</SideBarSignInButton>
+        </Link>
       </SideBarSignInContainer>
     </SideBarContainer>
   );
