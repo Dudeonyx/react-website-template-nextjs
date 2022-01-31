@@ -20,16 +20,33 @@ text-xl
 
 export const ArrowRight = tw(MdKeyboardArrowRight)`
 ml-2
-text-xl`;
+text-xl
+`;
 
 export const HeroContent = tw.div`
-z-20 text-white max-w-7xl absolute px-2 py-6 flex items-center flex-col
+z-20
+text-white
+max-w-7xl
+absolute
+px-2
+py-6
+flex
+items-center
+flex-col
 `;
 export const HeroH1 = tw.h1`
-text-white text-center text-[32px] md:text-5xl
+text-white
+ text-center
+ text-[32px]
+ md:text-5xl
+ my-4
 `;
 export const HeroP = tw.p`
-text-white max-w-[600px] text-center text-[18px] md:text-2xl`;
+text-white
+max-w-[600px]
+text-center
+text-[18px]
+md:text-2xl`;
 export const HeroBtnWrapper = tw.div`
 mt-8 flex items-center flex-col
 `;
