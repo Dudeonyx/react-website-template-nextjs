@@ -3,14 +3,17 @@ import tw from 'tailwind-styled-components';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 
 export const HeroContainer = tw.div`
-h-[800px] z-10 flex justify-center items-center relative`;
+h-[800px] z-10 flex justify-center items-center relative bg-black
+before:bg-gradient-to-b before:from-[rgb(0,0,0,0.2)] before:to-[rgb(0,0,0,0.9)_100%] before:inset-0 before:-z-30 before:absolute
+after:bg-gradient-to-b after:from-[rgb(0,0,0,0.2)] after:to-transparent after:inset-0 after:-z-30 after:absolute
+`;
 
 export const HeroBgContainer = tw.div`
--z-[45] h-full w-full absolute inset-0
+-z-[45] h-full w-full absolute inset-0 
 `;
 
 export const HeroVideoBg = tw.video`
-h-full w-full object-cover -z-40
+h-full w-full object-cover -z-40 bg-black
 `;
 
 export const ArrowForward = tw(MdArrowForward)`
