@@ -3,7 +3,7 @@ import { FaTimes } from 'react-icons/fa';
 import { Link as LinkS } from 'react-scroll';
 import React from 'react';
 
-export const SideBarContainer = tw.aside<{ $showSideBar: boolean }>`
+const SideBarContainer1 = tw.aside<{ $showSideBar: boolean }>`
 flex
 ${(props) => (props.$showSideBar ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full')}
 transition-all
@@ -19,6 +19,12 @@ items-center
 inset-0
 z-50
 `;
+export const SideBarContainer = tw(SideBarContainer1)``;
+
+const Divvy = tw.div<{ $test1: string }>`
+        text-black
+        `;
+export const RedDiv = tw(Divvy)`bg-red-500`;
 
 export const CloseIconContainer = tw.div`
     w-full
@@ -32,7 +38,7 @@ text-3xl
 text-white
 cursor-pointer
 `;
-console.log(FaTimes);
+// console.log(FaTimes);
 
 export const SideBarLinkContainer = tw.ul`
 flex
@@ -45,7 +51,6 @@ h-1/2
 
 `;
 export const SideBarLinkItem = tw.li`
-
 w-full
 flex
 justify-center
