@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useReducer, useEffect } from 'react';
 import HeroSection from '../components/HeroSection';
+import InfoSection from '../components/InfoSection/InfoSection';
 import NavBar from '../components/NavBar';
 import SideBar from '../components/SideBar';
 
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <NavBar toggleShowSideBar={toggleShowSideBar} />
       <SideBar showSideBar={showSideBar} toggleShowSideBar={toggleShowSideBar} />
       <HeroSection />
+      <InfoSection />
     </>
   );
 };
