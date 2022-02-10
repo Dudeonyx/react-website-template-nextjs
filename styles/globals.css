@@ -4,7 +4,26 @@
 
 * {
   padding: 0;
+
   margin: 0;
   font-family: 'Encode Sans Expanded', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+/* @layer components {
+  .grid-template-area {
+    grid-template-areas: 'col1 col2';
+  }
+  .grid-template-area-rev {
+    grid-template-areas: 'col2 col1';
+  }
+
+  @media screen and (max-width: 768px) {
+    .grid-template-area {
+      grid-template-areas: 'col1' 'col2';
+    }
+    .grid-template-area-rev {
+      grid-template-areas: 'col1 col1' 'col2 col2';
+    }
+  }
+} */
