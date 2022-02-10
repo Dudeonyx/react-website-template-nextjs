@@ -43,7 +43,8 @@ text-white
  text-[32px]
  md:text-5xl
  my-4
-`;
+`.withStyle<{ red?: boolean }>((p) => (p.red ? { color: 'red' } : {}));
+
 export const HeroP = tw.p`
 text-white
 max-w-[600px]
