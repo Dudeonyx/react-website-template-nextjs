@@ -61,7 +61,7 @@ mb-6
 text-5xl
 leading-[1.1]
 font-semibold
-${({ darkText }: { darkText?: boolean }) => (darkText ? 'text-[#010606]' : 'text-[#f7f8fa]')}
+${({ lightText }: { lightText?: boolean }) => (lightText ? 'text-[#f7f8fa]' : 'text-[#010606]')}
 sm:text-[32px]
 `;
 
@@ -70,7 +70,7 @@ max-w-[440px]
 mb-[35px]
 text-lg
 leading-6
-${({ darkText }: { darkText?: boolean }) => (darkText ? 'text-[#010606]' : 'text-[#fff]')}
+${({ darkText }: { darkText?: boolean }) => (darkText ? 'text-[#010606]' : 'text-white')}
 `;
 export const BtnWrap = tw.div`
     flex
