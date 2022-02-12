@@ -15,29 +15,66 @@ import {
   TopLine,
 } from './InfoSectionElements';
 
-type Props = {};
+type Props = {
+  id: string;
+  lightBg: boolean;
+  lightText: boolean;
+  lightTextDesc: boolean;
+  topLine: string;
+  headLine: string;
+  description: string;
+  buttonLabel: string;
+  imgStart: boolean;
+  img: string;
+  alt: string;
+  dark: boolean;
+  primary: boolean;
+  darkText: boolean;
+};
 
-const InfoSection = (props: Props) => {
+const InfoSection = ({
+  id,
+  lightBg,
+  lightText,
+  lightTextDesc,
+  topLine,
+  headLine,
+  buttonLabel,
+  imgStart,
+  img,
+  alt,
+  description,
+  dark,
+  primary,
+  darkText,
+}: Props) => {
   return (
     <>
-      <InfoContainer>
+      <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
-          <InfoRow>
+          <InfoRow imgStart={imgStart}>
             <Column col={1}>
               <TextWrapper>
-                <TopLine>Toplines</TopLine>
-                <Heading>Headings</Heading>
-                <Subtitle>Subtitles</Subtitle>
+                <TopLine>{topLine}</TopLine>
+                <Heading lightText={lightText}>{headLine}</Heading>
+                <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
-                  <Button $as={Link} big={false} primary fontBig={false} dark={false} to="home">
-                    Button
+                  <Button
+                    $as={Link}
+                    big={false}
+                    primary={primary}
+                    fontBig={false}
+                    dark={dark}
+                    to="home"
+                  >
+                    {buttonLabel}
                   </Button>
                 </BtnWrap>
               </TextWrapper>
             </Column>
             <Column col={2}>
               <ImgWrap>
-                <Img src=""></Img>
+                <Img src={img} alt={alt}></Img>
               </ImgWrap>
             </Column>
           </InfoRow>
