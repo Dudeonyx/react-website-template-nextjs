@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from 'react-scroll';
+import { Link } from 'react-scroll';
+import { Button } from '../ButtonElements';
 import {
   InfoContainer,
   InfoWrapper,
@@ -28,7 +29,9 @@ const InfoSection = (props: Props) => {
                 <Heading>Headings</Heading>
                 <Subtitle>Subtitles</Subtitle>
                 <BtnWrap>
-                  <Button to="home"></Button>
+                  <Button $as={Link} big={false} primary fontBig={false} dark={false} to="home">
+                    Button
+                  </Button>
                 </BtnWrap>
               </TextWrapper>
             </Column>
