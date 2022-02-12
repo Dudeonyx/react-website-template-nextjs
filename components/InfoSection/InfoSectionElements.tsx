@@ -1,9 +1,10 @@
+import Image from 'next/image';
 import tw from 'tailwind-styled-components';
 
 export const InfoContainer = tw.div<{ lightBg?: boolean }>`
 text-black
 ${({ lightBg }) => (lightBg ? 'bg-[#f9f9f9]' : 'bg-[#010606]')}
-px-24
+py-24
 md:p-0
 `;
 
@@ -14,24 +15,26 @@ h-[860px]
 w-full
 max-w-6xl
 mx-auto
-py-6
+px-6
 justify-center
 `;
 
 export const InfoRow = tw.div<{ imgStart?: boolean }>`
 grid
+auto-cols-fr
+items-center
 ${({ imgStart }) =>
   imgStart
-    ? "[--area: 'col2 col1'] md:[--area:'col1' 'col2']"
-    : "[--area: 'col1 col2'] md:[--area:'col1 col1' 'col2 col2']"}
-[grid-template-areas: --area]
+    ? "md:[--area:'col2_col1'] [--area:'col1'_'col2']"
+    : "md:[--area:'col1_col2'] [--area:'col1_col1'_'col2_col2']"}
+[grid-template-areas:var(--area)]
 `;
 
 export const Column = tw.div`
     mb-4
-    px-0
-    py-4
-    ${({ col }: { col: 1 | 2 }) => (col === 2 ? '[grid-area: col2]' : '[grid-area: col1]')}
+    py-0
+    px-4
+    ${({ col }: { col: 1 | 2 }) => (col === 2 ? '[grid-area:col2]' : '[grid-area:col1]')}
 `;
 // export const Column2 = tw.div`
 //     mb-4
@@ -81,7 +84,7 @@ export const ImgWrap = tw.div`
 max-w-[555px]
 h-full
 `;
-export const Img = tw.img`
+export const Img = tw(Image)`
     w-full
     m-0
     mb-[10px]
