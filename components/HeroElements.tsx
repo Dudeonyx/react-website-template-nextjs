@@ -4,8 +4,7 @@ import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 
 export const HeroContainer = tw.div`
 h-[800px] z-10 flex justify-center items-center relative bg-black
-before:bg-gradient-to-b before:from-[rgb(0,0,0,0.2)] before:to-[rgb(0,0,0,0.9)_100%] before:inset-0 before:-z-30 before:absolute
-after:bg-gradient-to-b after:from-[rgb(0,0,0,0.2)] after:to-transparent after:inset-0 after:-z-30 after:absolute
+before:[background:linear-gradient(180deg,rgba(0,0,0,0.2)0%,rgba(0,0,0,0.6)100%),linear-gradient(180deg,rgba(0,0,0,0.2)0%,transparent_100%)] before:inset-0 before:-z-30 before:absolute
 `;
 
 export const HeroBgContainer = tw.div`
@@ -43,7 +42,7 @@ text-white
  text-[32px]
  md:text-5xl
  my-4
-`.withStyle<{ red?: boolean }>((p) => (p.red ? { color: 'red' } : {}));
+`;
 
 export const HeroP = tw.p`
 text-white
