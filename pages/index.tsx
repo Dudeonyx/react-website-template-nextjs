@@ -6,6 +6,7 @@ import InfoSection from '../components/InfoSection/InfoSection';
 import NavBar from '../components/NavBar';
 import SideBar from '../components/SideBar';
 import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/Data';
+import Services from '../components/Services/Services';
 
 export interface SideBarProps {
   showSideBar: boolean;
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
+      <Services />
     </>
   );
 };
