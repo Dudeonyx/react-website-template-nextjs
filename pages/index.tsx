@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 
-import { useReducer, useEffect } from 'react';
+import { useReducer } from 'react';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection/InfoSection';
 import NavBar from '../components/NavBar';

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   ServicesContainer,
   ServicesH1,
@@ -9,9 +9,6 @@ import {
   ServicesP,
 } from './ServicesElements';
 
-import car from '../../public/car.svg';
-import savings from '../../public/savings.svg';
-import secure_login from '../../public/secure_login.svg';
 interface IServicesProps {}
 
 const Services: React.FC<IServicesProps> = (props) => {

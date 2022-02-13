@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import tw from 'tailwind-styled-components';
 
 export const InfoContainer = tw.div<{ lightBg?: boolean }>`
