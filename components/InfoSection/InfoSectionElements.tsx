@@ -61,11 +61,11 @@ mb-4
 
 export const Heading = tw.h1`
 mb-6
-text-5xl
+xs:text-5xl
 leading-[1.1]
 font-semibold
 ${({ lightText }: { lightText?: boolean }) => (lightText ? 'text-[#f7f8fa]' : 'text-[#010606]')}
-sm:text-[32px]
+text-[32px]
 `;
 
 export const Subtitle = tw.p`
@@ -84,7 +84,7 @@ export const ImgWrap = tw.div`
 max-w-[555px]
 h-full
 `;
-export const Img = tw(Image)`
+export const Img = tw.img`
     w-full
     m-0
     mb-[10px]
