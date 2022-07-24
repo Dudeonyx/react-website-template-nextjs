@@ -29,7 +29,7 @@ const Services: React.FC<IServicesProps> = (props) => {
         <ServicesCard>
           <ServicesIcon src="/savings.svg" />
           <ServicesH2>Premium Benefits</ServicesH2>
-          <ServicesP>Unlock our special membership ard that returns 5% cash back</ServicesP>
+          <ServicesP>Unlock our special membership card that returns 5% cash back</ServicesP>
         </ServicesCard>
       </ServicesWrapper>
     </ServicesContainer>
