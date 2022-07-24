@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { SideBarProps } from '../pages';
+import { NavData } from './NavData';
 import {
   CloseIcon,
   CloseIconContainer,
@@ -19,18 +20,11 @@ const SideBar = (props: SideBarProps) => {
         <CloseIcon onClick={props.toggleShowSideBar} />
       </CloseIconContainer>
       <SideBarLinkContainer>
-        <SideBarLinkItem>
-          <SideBarLink to="about">About</SideBarLink>
-        </SideBarLinkItem>
-        <SideBarLinkItem>
-          <SideBarLink to="discover">Discover</SideBarLink>
-        </SideBarLinkItem>
-        <SideBarLinkItem>
-          <SideBarLink to="services">Services</SideBarLink>
-        </SideBarLinkItem>
-        <SideBarLinkItem>
-          <SideBarLink to="signup">Sign Up</SideBarLink>
-        </SideBarLinkItem>
+        {NavData.map(([link, text]) => (
+          <SideBarLinkItem key={link + text}>
+            <SideBarLink to={link}>{text}</SideBarLink>
+          </SideBarLinkItem>
+        ))}
       </SideBarLinkContainer>
       <SideBarSignInContainer>
         <Link href="/signin" passHref>

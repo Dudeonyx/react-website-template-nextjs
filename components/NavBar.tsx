@@ -12,6 +12,7 @@ import {
   SideBarMenuContainer,
   NavLink,
 } from './NavElements';
+import { NavData } from './NavData';
 
 export default function NavBar({ toggleShowSideBar }: Omit<SideBarProps, 'showSideBar'>) {
   return (
@@ -19,18 +20,11 @@ export default function NavBar({ toggleShowSideBar }: Omit<SideBarProps, 'showSi
       <NavContainer>
         <Logo>dolla</Logo>
         <NavLinksContainer>
-          <NavLinkItem>
-            <NavLink to="about">About</NavLink>
-          </NavLinkItem>
-          <NavLinkItem>
-            <NavLink to="discover">Discover</NavLink>
-          </NavLinkItem>
-          <NavLinkItem>
-            <NavLink to="services">Services</NavLink>
-          </NavLinkItem>
-          <NavLinkItem>
-            <NavLink to="signup">Sign Up</NavLink>
-          </NavLinkItem>
+          {NavData.map(([link, text]) => (
+            <NavLinkItem key={link + text}>
+              <NavLink to={link}>{text}</NavLink>
+            </NavLinkItem>
+          ))}
         </NavLinksContainer>
         <SignInButtonContainer>
           <Link href="/signin" passHref>
