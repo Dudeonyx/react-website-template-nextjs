@@ -12,7 +12,7 @@ bg-black
 `;
 
 export const ServicesH1 = tw.h1`
-text-5xl
+text-4xl
 font-bold
 text-white
 mb-6
@@ -23,15 +23,23 @@ flex-col
 sm:flex-row
 sm:items-stretch
 items-center
+max-w-full
+md:max-w-3xl
+xl:max-w-4xl
 
 justify-center
-px-6
+px-4
+sm:-ml-2
+-mt-2
+sm:mt-0
 
 `;
 
 export const ServicesCard = tw.div`
 bg-white
-m-2
+sm:ml-2
+mt-2
+sm:mt-0
 rounded-3xl
 sm:w-[33%]
 w-full
@@ -44,12 +52,13 @@ flex-col
 export const ServicesIcon = tw.img`
 
 h-40
-
+mb-3
 `;
 
 export const ServicesH2 = tw.h2`
 font-bold
 text-center
+mb-3
 
 `;
 
