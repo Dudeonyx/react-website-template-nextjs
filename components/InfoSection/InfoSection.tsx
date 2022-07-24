@@ -50,21 +50,21 @@ const InfoSection = ({
 }: Props) => {
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
+      <InfoContainer $lightBg={lightBg} id={id}>
         <InfoWrapper>
-          <InfoRow imgStart={imgStart}>
-            <Column col={1}>
+          <InfoRow $imgStart={imgStart}>
+            <Column $col={1}>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headLine}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
+                <Heading $lightText={lightText}>{headLine}</Heading>
+                <Subtitle $darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
                     $as={Link}
-                    big={false}
-                    primary={primary}
-                    fontBig={false}
-                    dark={dark}
+                    $big={false}
+                    $primary={primary}
+                    $fontBig={false}
+                    $dark={dark}
                     to="home"
                   >
                     {buttonLabel}
@@ -72,7 +72,7 @@ const InfoSection = ({
                 </BtnWrap>
               </TextWrapper>
             </Column>
-            <Column col={2}>
+            <Column $col={2}>
               <ImgWrap>
                 <Img src={img} alt={alt} />
               </ImgWrap>

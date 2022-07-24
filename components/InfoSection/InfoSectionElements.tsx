@@ -1,8 +1,8 @@
 import tw from 'tailwind-styled-components';
 
-export const InfoContainer = tw.div<{ lightBg?: boolean }>`
+export const InfoContainer = tw.div<{ $lightBg?: boolean }>`
 text-black
-${({ lightBg }) => (lightBg ? 'bg-[#f9f9f9]' : 'bg-[#010606]')}
+${({ $lightBg: lightBg }) => (lightBg ? 'bg-[#f9f9f9]' : 'bg-[#010606]')}
 py-24
 md:p-0
 `;
@@ -18,11 +18,11 @@ px-6
 justify-center
 `;
 
-export const InfoRow = tw.div<{ imgStart?: boolean }>`
+export const InfoRow = tw.div<{ $imgStart?: boolean }>`
 grid
 auto-cols-fr
 items-center
-${({ imgStart }) =>
+${({ $imgStart: imgStart }) =>
   imgStart
     ? "md:[--area:'col2_col1'] [--area:'col1'_'col2']"
     : "md:[--area:'col1_col2'] [--area:'col1_col1'_'col2_col2']"}
@@ -33,7 +33,7 @@ export const Column = tw.div`
     mb-4
     py-0
     px-4
-    ${({ col }: { col: 1 | 2 }) => (col === 2 ? '[grid-area:col2]' : '[grid-area:col1]')}
+    ${({ $col: col }: { $col: 1 | 2 }) => (col === 2 ? '[grid-area:col2]' : '[grid-area:col1]')}
 `;
 // export const Column2 = tw.div`
 //     mb-4
@@ -63,7 +63,8 @@ mb-6
 xs:text-5xl
 leading-[1.1]
 font-semibold
-${({ lightText }: { lightText?: boolean }) => (lightText ? 'text-[#f7f8fa]' : 'text-[#010606]')}
+${({ $lightText: lightText }: { $lightText?: boolean }) =>
+  lightText ? 'text-[#f7f8fa]' : 'text-[#010606]'}
 text-[32px]
 `;
 
@@ -72,7 +73,8 @@ max-w-[440px]
 mb-[35px]
 text-lg
 leading-6
-${({ darkText }: { darkText?: boolean }) => (darkText ? 'text-[#010606]' : 'text-white')}
+${({ $darkText: darkText }: { $darkText?: boolean }) =>
+  darkText ? 'text-[#010606]' : 'text-white'}
 `;
 export const BtnWrap = tw.div`
     flex
