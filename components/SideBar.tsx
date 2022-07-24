@@ -22,7 +22,9 @@ const SideBar = (props: SideBarProps) => {
       <SideBarLinkContainer>
         {NavData.map(([link, text]) => (
           <SideBarLinkItem key={link + text}>
-            <SideBarLink to={link}>{text}</SideBarLink>
+            <SideBarLink to={link} onClick={props.toggleShowSideBar}>
+              {text}
+            </SideBarLink>
           </SideBarLinkItem>
         ))}
       </SideBarLinkContainer>
