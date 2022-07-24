@@ -14,7 +14,7 @@
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.1",
     "react-scroll": "^1.8.4",
-    "tailwind-styled-components": "^2.1.4"
+    "tailwind-styled-components": "github:Dudeonyx/Tailwind-styled-component#test"
   },
   "devDependencies": {
     "@types/node": "17.0.6",
