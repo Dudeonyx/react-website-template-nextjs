@@ -53,7 +53,7 @@ const InfoSection = ({
       <InfoContainer $lightBg={lightBg} id={id}>
         <InfoWrapper>
           <InfoRow $imgStart={imgStart}>
-            <Column $col={1}>
+            <Column>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
                 <Heading $lightText={lightText}>{headLine}</Heading>
@@ -72,7 +72,7 @@ const InfoSection = ({
                 </BtnWrap>
               </TextWrapper>
             </Column>
-            <Column $col={2}>
+            <Column>
               <ImgWrap>
                 <Img src={img} alt={alt} />
               </ImgWrap>

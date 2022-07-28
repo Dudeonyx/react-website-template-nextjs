@@ -18,23 +18,33 @@ px-6
 justify-center
 `;
 
+// export const InfoRow = tw.div<{ $imgStart?: boolean }>`
+// grid
+// auto-cols-fr
+// items-center
+// ${({ $imgStart: imgStart }) =>
+//   imgStart
+//     ? "md:[--area:'col2_col1'] [--area:'col1'_'col2']"
+//     : "md:[--area:'col1_col2'] [--area:'col1_col1'_'col2_col2']"}
+// [grid-template-areas:var(--area)]
+// `;
 export const InfoRow = tw.div<{ $imgStart?: boolean }>`
-grid
-auto-cols-fr
+flex
 items-center
-${({ $imgStart: imgStart }) =>
-  imgStart
-    ? "md:[--area:'col2_col1'] [--area:'col1'_'col2']"
-    : "md:[--area:'col1_col2'] [--area:'col1_col1'_'col2_col2']"}
-[grid-template-areas:var(--area)]
+${({ $imgStart: imgStart }) => (imgStart ? 'md:flex-row-reverse flex-col' : 'md:flex-row flex-col')}
 `;
 
 export const Column = tw.div`
     mb-4
     py-0
     px-4
-    ${({ $col: col }: { $col: 1 | 2 }) => (col === 2 ? '[grid-area:col2]' : '[grid-area:col1]')}
 `;
+// export const Column = tw.div`
+//     mb-4
+//     py-0
+//     px-4
+//     ${({ $col: col }: { $col: 1 | 2 }) => (col === 2 ? '[grid-area:col2]' : '[grid-area:col1]')}
+// `;
 // export const Column2 = tw.div`
 //     mb-4
 //     px-0
